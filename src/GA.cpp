@@ -1,6 +1,27 @@
 #include "GA.h"
 #include <algorithm>
 #include <random>
+#include <stdexcept>
+
+// Termination condition: population is "converged" if every bit position has
+// >= dom dominance of either 0 or 1 (e.g., dom = 0.95).
+static bool converged_dominance(const std::vector<Chromosome>& pop,
+                                int gene_length,
+                                double dom = 0.95) {
+    int N = (int)pop.size();
+    if (N == 0) return false;
+
+    for (int j = 0; j < gene_length; ++j) {
+        int ones = 0;
+        for (int i = 0; i < N; ++i) {
+            ones += pop[i].bits[j] ? 1 : 0;
+        }
+        double p = (double)ones / (double)N;
+        double dominance = (p > 1.0 - p) ? p : (1.0 - p);
+        if (dominance < dom) return false; // not converged at this bit
+    }
+    return true;
+}
 
 GA::GA(const GAConfig& cfg_,
        std::mt19937& rng_,
@@ -15,12 +36,14 @@ GA::GA(const GAConfig& cfg_,
       cross(std::move(cross_)),
       mut(std::move(mut_)) {
 
-    population.resize(cfg.population_size);
-    fitness_vec.resize(cfg.population_size, 0.0);
+    population.assign(cfg.population_size, Chromosome(cfg.gene_length));
+    fitness_vec.assign(cfg.population_size, 0.0);
 }
 
-void GA::init_population() {
+void GA::init_population_gray() {
+    // We randomize bits. DecodeUtils interprets them as Gray when decoding.
     std::bernoulli_distribution bit(0.5);
+
     for (int i = 0; i < cfg.population_size; ++i) {
         population[i] = Chromosome(cfg.gene_length);
         for (int j = 0; j < cfg.gene_length; ++j) {
@@ -36,10 +59,15 @@ void GA::evaluate_population(int gen) {
 }
 
 void GA::evaluate() {
-    init_population();
+    init_population_gray();
 
     for (int gen = 0; gen < cfg.max_generations; ++gen) {
         evaluate_population(gen);
+
+        // Terminate if population converged (>=95% dominance on every gene/bit)
+        if (converged_dominance(population, cfg.gene_length, 0.95)) {
+            break;
+        }
 
         std::vector<Chromosome> next;
         next.reserve(cfg.population_size);
@@ -47,7 +75,11 @@ void GA::evaluate() {
         while ((int)next.size() < cfg.population_size) {
             int i = sel->pick_parent(population, fitness_vec, rng);
             int j = sel->pick_parent(population, fitness_vec, rng);
-            if (i < 0 || j < 0) break;
+
+            // Selection should never fail if population is non-empty
+            if (i < 0 || j < 0) {
+                throw std::runtime_error("Selection failed: returned invalid index");
+            }
 
             auto [c1, c2] = cross->cross(population[i], population[j], rng);
 
@@ -61,10 +93,18 @@ void GA::evaluate() {
         population = std::move(next);
     }
 
-    // final evaluation so best_fitness() is meaningful after run
+    // Final eval so best_fitness() reflects the final population
     evaluate_population(cfg.max_generations);
 }
 
 double GA::best_fitness() const {
     return *std::max_element(fitness_vec.begin(), fitness_vec.end());
+}
+
+const Chromosome& GA::best_chromosome() const {
+    int best_i = 0;
+    for (int i = 1; i < (int)fitness_vec.size(); ++i) {
+        if (fitness_vec[i] > fitness_vec[best_i]) best_i = i;
+    }
+    return population[best_i];
 }

@@ -10,10 +10,10 @@
 #include "IMutation.h"
 
 struct GAConfig {
-    int population_size = 50;
-    int gene_length = 32;
+    int population_size = 100;
+    int gene_length = 16;       // 16-bit chromosome: 8 for x, 8 for y
     int max_generations = 200;
-    double mutation_rate = 0.01; // probability per bit
+    double mutation_rate = 0.01; // per-bit
 };
 
 class GA {
@@ -25,8 +25,9 @@ public:
        std::unique_ptr<ICrossover> cross,
        std::unique_ptr<IMutation> mut);
 
-    void evaluate();            // runs the full GA
-    double best_fitness() const;
+    const Chromosome& best_chromosome() const;
+    void evaluate();                 // run until max_generations
+    double best_fitness() const;     // best fitness of last evaluated population
 
 private:
     GAConfig cfg;
@@ -40,6 +41,6 @@ private:
     std::unique_ptr<ICrossover> cross;
     std::unique_ptr<IMutation> mut;
 
-    void init_population();
+    void init_population_gray();
     void evaluate_population(int gen);
 };

@@ -1,6 +1,12 @@
 [
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\BitFlipMutation.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\BitFlipMutation.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/BitFlipMutation.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/BitFlipMutation.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
   "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\Crossover.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\Crossover.cpp",
   "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Crossover.cpp",
   "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/Crossover.cpp.obj"
@@ -43,6 +49,12 @@
 },
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessRastrigin.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessRastrigin.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessRastrigin.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessRastrigin.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
   "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\GA.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\GA.cpp",
   "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/GA.cpp",
   "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/GA.cpp.obj"
@@ -70,6 +82,18 @@
   "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\Selection.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\Selection.cpp",
   "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Selection.cpp",
   "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/Selection.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\SinglePointCrossover.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\SinglePointCrossover.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/SinglePointCrossover.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/SinglePointCrossover.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\TournamentSelection.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\TournamentSelection.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/TournamentSelection.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/TournamentSelection.cpp.obj"
 },
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",

@@ -4,6 +4,7 @@
 # SRC_FILES at CMakeLists.txt:7 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/*.cpp")
 set(OLD_GLOB
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/BitFlipMutation.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Crossover.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DecodeUtils.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyCrossover.cpp"
@@ -11,11 +12,14 @@ set(OLD_GLOB
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyMutation.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummySelection.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Fitness.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessRastrigin.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/GA.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Mutation.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Progress.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/RandomUtils.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Selection.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/SinglePointCrossover.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/TournamentSelection.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
