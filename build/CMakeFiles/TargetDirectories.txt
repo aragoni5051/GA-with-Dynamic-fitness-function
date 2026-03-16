@@ -1,0 +1,3 @@
+C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir
+C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/edit_cache.dir
+C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/rebuild_cache.dir
