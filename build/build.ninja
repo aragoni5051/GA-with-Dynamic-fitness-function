@@ -67,6 +67,42 @@ build CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj: CXX_COMPILER__ga_unscanned_Debu
   TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
   TARGET_PDB = ga.pdb
 
+build CMakeFiles\ga.dir\src\DummyCrossover.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\DummyCrossover.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
+build CMakeFiles\ga.dir\src\DummyFitness.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\DummyFitness.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
+build CMakeFiles\ga.dir\src\DummyMutation.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\DummyMutation.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
+build CMakeFiles\ga.dir\src\DummySelection.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\DummySelection.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
 build CMakeFiles\ga.dir\src\Fitness.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\Fitness.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
@@ -138,7 +174,7 @@ build CMakeFiles\ga.dir\src\main.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\U
 #############################################
 # Link the executable ga.exe
 
-build ga.exe: CXX_EXECUTABLE_LINKER__ga_Debug CMakeFiles\ga.dir\src\Crossover.cpp.obj CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj CMakeFiles\ga.dir\src\Fitness.cpp.obj CMakeFiles\ga.dir\src\GA.cpp.obj CMakeFiles\ga.dir\src\Mutation.cpp.obj CMakeFiles\ga.dir\src\Progress.cpp.obj CMakeFiles\ga.dir\src\RandomUtils.cpp.obj CMakeFiles\ga.dir\src\Selection.cpp.obj CMakeFiles\ga.dir\src\main.cpp.obj
+build ga.exe: CXX_EXECUTABLE_LINKER__ga_Debug CMakeFiles\ga.dir\src\Crossover.cpp.obj CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj CMakeFiles\ga.dir\src\DummyCrossover.cpp.obj CMakeFiles\ga.dir\src\DummyFitness.cpp.obj CMakeFiles\ga.dir\src\DummyMutation.cpp.obj CMakeFiles\ga.dir\src\DummySelection.cpp.obj CMakeFiles\ga.dir\src\Fitness.cpp.obj CMakeFiles\ga.dir\src\GA.cpp.obj CMakeFiles\ga.dir\src\Mutation.cpp.obj CMakeFiles\ga.dir\src\Progress.cpp.obj CMakeFiles\ga.dir\src\RandomUtils.cpp.obj CMakeFiles\ga.dir\src\Selection.cpp.obj CMakeFiles\ga.dir\src\main.cpp.obj
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console

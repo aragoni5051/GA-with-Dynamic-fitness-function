@@ -6,6 +6,10 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/MEMI/Desktop/Programs/GA-with
 set(OLD_GLOB
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Crossover.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DecodeUtils.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyCrossover.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyFitness.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyMutation.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummySelection.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Fitness.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/GA.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Mutation.cpp"

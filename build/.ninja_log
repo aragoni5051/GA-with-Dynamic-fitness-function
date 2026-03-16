@@ -1,0 +1,24 @@
+# ninja log v6
+44	89	7953431115048334	C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/cmake.verify_globs	cd9fb4e776186906
+63	355	7953412375593376	CMakeFiles/ga.dir/src/Crossover.cpp.obj	e335e182caf6e47d
+79	386	7953412375753380	CMakeFiles/ga.dir/src/DecodeUtils.cpp.obj	18c59a5ee90ca8d6
+130	358	7953412376263437	CMakeFiles/ga.dir/src/Mutation.cpp.obj	ace63eaaabf93774
+95	383	7953412375903388	CMakeFiles/ga.dir/src/Fitness.cpp.obj	f3101cde3145734c
+113	393	7953412376083412	CMakeFiles/ga.dir/src/GA.cpp.obj	9ba3af65b9136da9
+184	376	7953412376793493	CMakeFiles/ga.dir/src/Selection.cpp.obj	badc8bd240bf6308
+165	387	7953412376613457	CMakeFiles/ga.dir/src/RandomUtils.cpp.obj	7719002f112b5e01
+84	196	7953413679888108	CMakeFiles/ga.dir/src/main.cpp.obj	b4a182663d5d2c9e
+148	1014	7953412376443444	CMakeFiles/ga.dir/src/Progress.cpp.obj	1dbf409718f3115e
+197	450	7953413681018192	ga.exe	ecf6b7205ce4ed6
+90	430	7953431117048538	build.ninja	8f7210d0a56f10a0
+90	430	7953431117048538	C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/cmake_install.cmake	8f7210d0a56f10a0
+53	112	7953431119068620	C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/cmake.verify_globs	cd9fb4e776186906
+200	1326	7953431120538755	CMakeFiles/ga.dir/src/Fitness.cpp.obj	f3101cde3145734c
+239	1461	7953431120928778	CMakeFiles/ga.dir/src/Progress.cpp.obj	1dbf409718f3115e
+117	2059	7953431119708676	CMakeFiles/ga.dir/src/DummyCrossover.cpp.obj	2021bf4d86cd3a81
+179	2089	7953431120338791	CMakeFiles/ga.dir/src/DummySelection.cpp.obj	da32d5a679ecb793
+258	2105	7953431121118788	CMakeFiles/ga.dir/src/main.cpp.obj	b4a182663d5d2c9e
+157	2113	7953431120108703	CMakeFiles/ga.dir/src/DummyMutation.cpp.obj	f625f5ac16e705a7
+135	2121	7953431119888700	CMakeFiles/ga.dir/src/DummyFitness.cpp.obj	f838166956e4d11f
+220	2191	7953431120738761	CMakeFiles/ga.dir/src/GA.cpp.obj	9ba3af65b9136da9
+2192	2638	7953431140460188	ga.exe	680ac01c1752646d

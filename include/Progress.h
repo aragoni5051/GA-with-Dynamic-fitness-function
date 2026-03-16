@@ -1,6 +1,6 @@
 #pragma once
+#include <string_view>
 
-// Runs multiple GA epochs, prints a progress bar, and prints final success rate.
-// - epochs: number of independent runs
-// - ans: target answer to count as "success"
-void run_epochs(int epochs, int ans);
+// Updates a single-line progress bar (overwrites the same line).
+// Call repeatedly with done in [0,total]. Prints newline automatically when done==total.
+void progress_bar(int done, int total, std::string_view label = {});

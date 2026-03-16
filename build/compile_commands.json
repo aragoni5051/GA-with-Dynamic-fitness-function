@@ -13,6 +13,30 @@
 },
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\DummyCrossover.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\DummyCrossover.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyCrossover.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/DummyCrossover.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\DummyFitness.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\DummyFitness.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyFitness.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/DummyFitness.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\DummyMutation.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\DummyMutation.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummyMutation.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/DummyMutation.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\DummySelection.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\DummySelection.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DummySelection.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/DummySelection.cpp.obj"
+},
+{
+  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
   "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\Fitness.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\Fitness.cpp",
   "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Fitness.cpp",
   "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/Fitness.cpp.obj"

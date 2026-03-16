@@ -1,39 +1,22 @@
 #include "Progress.h"
 #include <cstdio>
 
-// include your GA header here
-#include "GA.h"   // adjust include path if needed
-
-static void print_progress(int done, int total) {
+void progress_bar(int done, int total, std::string_view label) {
     const int width = 30;
-    double frac = (total == 0) ? 1.0 : (double)done / (double)total;
-    if (frac < 0) frac = 0;
-    if (frac > 1) frac = 1;
+    if (total <= 0) total = 1;
+    if (done < 0) done = 0;
+    if (done > total) done = total;
 
+    double frac = (double)done / (double)total;
     int filled = (int)(frac * width);
 
-    std::printf("\r[");
+    std::printf("\r");
+    if (!label.empty()) std::printf("%.*s ", (int)label.size(), label.data());
+
+    std::printf("[");
     for (int i = 0; i < width; ++i) std::printf(i < filled ? "=" : " ");
     std::printf("] %3d%% (%d/%d)", (int)(frac * 100.0 + 0.5), done, total);
     std::fflush(stdout);
 
     if (done == total) std::printf("\n");
-}
-
-void run_epochs(int epochs, int ans) {
-    int hitcnt = 0;
-
-    for (int e = 1; e <= epochs; ++e) {
-        // Keep GA construction simple; you can swap these strings later.
-        GA ga("fixed", "TournamentSelection", "RandomMutation", "SPC");
-
-        ga.evaluate(); // runs full GA until termination
-
-        if (ga.getAnswer() == ans) hitcnt++;
-
-        print_progress(e, epochs);
-    }
-
-    std::printf("Success rate: %.4f (%d/%d)\n",
-                hitcnt / (double)epochs, hitcnt, epochs);
 }
