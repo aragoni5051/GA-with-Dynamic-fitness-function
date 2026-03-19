@@ -58,15 +58,6 @@ build CMakeFiles\ga.dir\src\BitFlipMutation.cpp.obj: CXX_COMPILER__ga_unscanned_
   TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
   TARGET_PDB = ga.pdb
 
-build CMakeFiles\ga.dir\src\Crossover.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\Crossover.cpp || cmake_object_order_depends_target_ga
-  CONFIG = Debug
-  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
-  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
-  OBJECT_DIR = CMakeFiles\ga.dir
-  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
-  TARGET_PDB = ga.pdb
-
 build CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\DecodeUtils.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
@@ -76,7 +67,7 @@ build CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj: CXX_COMPILER__ga_unscanned_Debu
   TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
   TARGET_PDB = ga.pdb
 
-build CMakeFiles\ga.dir\src\Fitness.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\Fitness.cpp || cmake_object_order_depends_target_ga
+build CMakeFiles\ga.dir\src\FitnessFixed.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\FitnessFixed.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
   INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
@@ -85,7 +76,25 @@ build CMakeFiles\ga.dir\src\Fitness.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$
   TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
   TARGET_PDB = ga.pdb
 
-build CMakeFiles\ga.dir\src\FitnessRastrigin.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\FitnessRastrigin.cpp || cmake_object_order_depends_target_ga
+build CMakeFiles\ga.dir\src\FitnessFlattened.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\FitnessFlattened.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
+build CMakeFiles\ga.dir\src\FitnessFourier.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\FitnessFourier.cpp || cmake_object_order_depends_target_ga
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
+  OBJECT_DIR = CMakeFiles\ga.dir
+  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
+  TARGET_PDB = ga.pdb
+
+build CMakeFiles\ga.dir\src\FitnessTaylor.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\FitnessTaylor.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
   INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
@@ -95,15 +104,6 @@ build CMakeFiles\ga.dir\src\FitnessRastrigin.cpp.obj: CXX_COMPILER__ga_unscanned
   TARGET_PDB = ga.pdb
 
 build CMakeFiles\ga.dir\src\GA.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\GA.cpp || cmake_object_order_depends_target_ga
-  CONFIG = Debug
-  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
-  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
-  OBJECT_DIR = CMakeFiles\ga.dir
-  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
-  TARGET_PDB = ga.pdb
-
-build CMakeFiles\ga.dir\src\Mutation.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\Mutation.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
   INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
@@ -122,15 +122,6 @@ build CMakeFiles\ga.dir\src\Progress.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C
   TARGET_PDB = ga.pdb
 
 build CMakeFiles\ga.dir\src\RandomUtils.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\RandomUtils.cpp || cmake_object_order_depends_target_ga
-  CONFIG = Debug
-  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
-  INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
-  OBJECT_DIR = CMakeFiles\ga.dir
-  OBJECT_FILE_DIR = CMakeFiles\ga.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\ga.dir\
-  TARGET_PDB = ga.pdb
-
-build CMakeFiles\ga.dir\src\Selection.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\src\Selection.cpp || cmake_object_order_depends_target_ga
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
   INCLUDES = -IC:\Users\MEMI\Desktop\Programs\GA-with-Dynamic-fitness-function\include
@@ -174,7 +165,7 @@ build CMakeFiles\ga.dir\src\main.cpp.obj: CXX_COMPILER__ga_unscanned_Debug C$:\U
 #############################################
 # Link the executable ga.exe
 
-build ga.exe: CXX_EXECUTABLE_LINKER__ga_Debug CMakeFiles\ga.dir\src\BitFlipMutation.cpp.obj CMakeFiles\ga.dir\src\Crossover.cpp.obj CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj CMakeFiles\ga.dir\src\Fitness.cpp.obj CMakeFiles\ga.dir\src\FitnessRastrigin.cpp.obj CMakeFiles\ga.dir\src\GA.cpp.obj CMakeFiles\ga.dir\src\Mutation.cpp.obj CMakeFiles\ga.dir\src\Progress.cpp.obj CMakeFiles\ga.dir\src\RandomUtils.cpp.obj CMakeFiles\ga.dir\src\Selection.cpp.obj CMakeFiles\ga.dir\src\SinglePointCrossover.cpp.obj CMakeFiles\ga.dir\src\TournamentSelection.cpp.obj CMakeFiles\ga.dir\src\main.cpp.obj
+build ga.exe: CXX_EXECUTABLE_LINKER__ga_Debug CMakeFiles\ga.dir\src\BitFlipMutation.cpp.obj CMakeFiles\ga.dir\src\DecodeUtils.cpp.obj CMakeFiles\ga.dir\src\FitnessFixed.cpp.obj CMakeFiles\ga.dir\src\FitnessFlattened.cpp.obj CMakeFiles\ga.dir\src\FitnessFourier.cpp.obj CMakeFiles\ga.dir\src\FitnessTaylor.cpp.obj CMakeFiles\ga.dir\src\GA.cpp.obj CMakeFiles\ga.dir\src\Progress.cpp.obj CMakeFiles\ga.dir\src\RandomUtils.cpp.obj CMakeFiles\ga.dir\src\SinglePointCrossover.cpp.obj CMakeFiles\ga.dir\src\TournamentSelection.cpp.obj CMakeFiles\ga.dir\src\main.cpp.obj
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
