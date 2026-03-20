@@ -61,8 +61,20 @@ void GA::evaluate_population(int gen) {
 void GA::evaluate() {
     init_population_gray();
 
+    int last_gen = 0;
+
     for (int gen = 0; gen < cfg.max_generations; ++gen) {
+        last_gen = gen;
+
         evaluate_population(gen);
+
+        // find best under current training fitness (fitness_vec)
+        int best_i = 0;
+        for (int i = 1; i < (int)fitness_vec.size(); ++i)
+            if (fitness_vec[i] > fitness_vec[best_i]) best_i = i;
+
+        // let fitness update (for local Taylor / Fourier)
+        fit->on_generation_end(population[best_i], gen, rng);
 
         // Terminate if population converged (>=95% dominance on every gene/bit)
         if (converged_dominance(population, cfg.gene_length, 0.95)) {
@@ -76,7 +88,6 @@ void GA::evaluate() {
             int i = sel->pick_parent(population, fitness_vec, rng);
             int j = sel->pick_parent(population, fitness_vec, rng);
 
-            // Selection should never fail if population is non-empty
             if (i < 0 || j < 0) {
                 throw std::runtime_error("Selection failed: returned invalid index");
             }
@@ -93,8 +104,8 @@ void GA::evaluate() {
         population = std::move(next);
     }
 
-    // Final eval so best_fitness() reflects the final population
-    evaluate_population(cfg.max_generations);
+    // Final eval using the LAST generation we actually reached
+    evaluate_population(last_gen);
 }
 
 double GA::best_fitness() const {

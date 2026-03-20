@@ -6,10 +6,7 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/MEMI/Desktop/Programs/GA-with
 set(OLD_GLOB
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/BitFlipMutation.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/DecodeUtils.cpp"
-  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFixed.cpp"
-  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFlattened.cpp"
-  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFourier.cpp"
-  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessTaylor.cpp"
+  "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessShapers2D.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/GA.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/Progress.cpp"
   "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/RandomUtils.cpp"

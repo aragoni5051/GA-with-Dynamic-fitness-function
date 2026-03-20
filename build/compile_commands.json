@@ -13,27 +13,9 @@
 },
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
-  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessFixed.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessFixed.cpp",
-  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFixed.cpp",
-  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessFixed.cpp.obj"
-},
-{
-  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
-  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessFlattened.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessFlattened.cpp",
-  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFlattened.cpp",
-  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessFlattened.cpp.obj"
-},
-{
-  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
-  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessFourier.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessFourier.cpp",
-  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessFourier.cpp",
-  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessFourier.cpp.obj"
-},
-{
-  "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
-  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessTaylor.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessTaylor.cpp",
-  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessTaylor.cpp",
-  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessTaylor.cpp.obj"
+  "command": "C:\\PROGRA~1\\MICROS~2\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\ga.dir\\src\\FitnessShapers2D.cpp.obj /FdCMakeFiles\\ga.dir\\ /FS -c C:\\Users\\MEMI\\Desktop\\Programs\\GA-with-Dynamic-fitness-function\\src\\FitnessShapers2D.cpp",
+  "file": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/src/FitnessShapers2D.cpp",
+  "output": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build/CMakeFiles/ga.dir/src/FitnessShapers2D.cpp.obj"
 },
 {
   "directory": "C:/Users/MEMI/Desktop/Programs/GA-with-Dynamic-fitness-function/build",
