@@ -5,30 +5,29 @@
 
 #include <array>
 #include <vector>
+#include <random>
 
 enum class Shaper2D {
     Fixed,
     Flattened,
-    Taylor,   // (local quadratic surrogate around best-of-generation)
-    Fourier   // (global Fourier surrogate over domain, truncation order grows)
+    Taylor,
+    Fourier
 };
 
 struct ShaperConfig2D {
     Shaper2D type = Shaper2D::Fixed;
-
     int max_generations = 1000;
 
-    // Flattened: alpha schedule uses max_generations
-    // Taylor:
+    // Taylor settings
     int taylor_refit_every = 10;
     int taylor_samples = 300;
     int taylor_radius = 12;
-    double taylor_surrogate_weight = 0.3; // how much surrogate influences early training
+    int taylor_n0 = 1;
+    int taylor_nmax = 2;
 
-    // Fourier:
+    // Fourier settings
     int fourier_n0 = 1;
-    int fourier_nmax = 10;
-    double fourier_surrogate_weight = 0.3; // how much surrogate influences early training
+    int fourier_nmax = 127;
 };
 
 class FitnessShaper2D : public IFitness {
@@ -43,36 +42,49 @@ private:
     BenchmarkConfig2D bcfg;
     ShaperConfig2D scfg;
 
-    // Flattened
+    // ---------- Flattened ----------
     bool has_fbar = false;
     double fbar = 0.0;
 
-    // Taylor (quadratic model around (x0,y0))
-    int tx0 = 0, ty0 = 0;
+    // ---------- Taylor ----------
+    int tx0 = 0;
+    int ty0 = 0;
     bool has_taylor = false;
-    std::array<double, 6> ta{}; // a0 + a1 u + a2 v + a3 u^2 + a4 uv + a5 v^2
 
-    // Fourier (global coefficients computed once)
+    // Current Taylor coefficients.
+    // For now we keep quadratic storage; cpp can later generalize this if needed.
+    // [a0, a1, a2, a3, a4, a5] corresponds to:
+    // a0 + a1*u + a2*v + a3*u^2 + a4*u*v + a5*v^2
+    std::array<double, 6> taylor_coeffs{};
+
+    // ---------- Fourier ----------
     bool has_fourier = false;
     double fc0 = 0.0;
-    std::vector<double> fax, fbx, fay, fby; // 1..nmax
 
-    // Helpers
-    static double alpha_linear(int g, int G);
+    // Separable Fourier coefficients:
+    // Fx(x) = Σ (fax[k] cos(...) + fbx[k] sin(...))
+    // Fy(y) = Σ (fay[k] cos(...) + fby[k] sin(...))
+    std::vector<double> fax;
+    std::vector<double> fbx;
+    std::vector<double> fay;
+    std::vector<double> fby;
+
+    // ---------- Common helpers ----------
     static void decode_xy(const Chromosome& c, int& x, int& y);
-
+    static double alpha_linear(int g, int G);
     double base_xy(int x, int y) const;
 
-    // Flattened
+    // ---------- Flattened helpers ----------
     void ensure_fbar();
 
-    // Taylor
-    double taylor_surrogate(int x, int y) const;
+    // ---------- Taylor helpers ----------
+    int order_taylor(int g) const;
     void fit_taylor(std::mt19937& rng);
+    double taylor_value_xy(int x, int y, int n) const;
     static bool solve6(double M[6][6], double b[6], double out[6]);
 
-    // Fourier
-    int order_at(int g) const;
+    // ---------- Fourier helpers ----------
+    int order_fourier(int g) const;
     void ensure_fourier();
-    double fourier_surrogate(int x, int y, int n) const;
+    double fourier_value_xy(int x, int y, int n) const;
 };

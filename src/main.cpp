@@ -10,6 +10,7 @@
 #include "Benchmarks2D.h"
 #include "FitnessShapers2D.h"
 
+#include <chrono>
 #include <random>
 #include <cstdio>
 #include <vector>
@@ -33,14 +34,17 @@ static void run_experiment(const char* name,
                            int RUNS,
                            unsigned base_seed,
                            const GAConfig& cfg,
+                           const BenchmarkConfig2D& bcfg,
                            FitnessFactory make_fitness) {
-    int hitcnt = 0;
-    const std::pair<int,int> GLOBAL_OPT = {21, 34};
+    using clock = std::chrono::steady_clock;
 
+    int hitcnt = 0;
     std::unordered_map<std::pair<int,int>, int, PairHash> opt_counts;
     opt_counts.reserve((std::size_t)RUNS);
 
     progress_bar(0, RUNS, name);
+
+    auto t0 = clock::now();
 
     for (int r = 1; r <= RUNS; ++r) {
         std::mt19937 rng(base_seed + r);
@@ -57,13 +61,15 @@ static void run_experiment(const char* name,
         int x, y;
         decode_xy_gray_8_8(bestC.bits, x, y);
 
-        std::pair<int,int> xy = {x, y};
-        opt_counts[xy]++;
-
-        if (xy == GLOBAL_OPT) hitcnt++;
+        opt_counts[{x, y}]++;
+        if (x == bcfg.x0 && y == bcfg.y0) hitcnt++;
 
         progress_bar(r, RUNS, name);
     }
+
+    auto t1 = clock::now();
+    double total_ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
+    double avg_ms = total_ms / (double)RUNS;
 
     std::vector<std::pair<std::pair<int,int>, int>> items;
     items.reserve(opt_counts.size());
@@ -75,8 +81,9 @@ static void run_experiment(const char* name,
     double hit_ratio = hitcnt / (double)RUNS;
 
     std::printf("\n=== %s ===\n", name);
+    std::printf("Avg time per run: %.3f ms\n", avg_ms);
     std::printf("Hit ratio (x,y)=(%d,%d): %.4f (%d/%d)\n\n",
-                GLOBAL_OPT.first, GLOBAL_OPT.second, hit_ratio, hitcnt, RUNS);
+                bcfg.x0, bcfg.y0, hit_ratio, hitcnt, RUNS);
 
     std::printf("Top 5 converged optima (by final best (x,y)):\n");
     int topK = (int)std::min<std::size_t>(5, items.size());
@@ -101,32 +108,30 @@ int main() {
     cfg.max_generations = 1000;
     cfg.mutation_rate = 0.02;
 
-    // Choose the base benchmark here (easy swap!)
-    Benchmark2D bench = Benchmark2D::Sphere;
+    Benchmark2D bench = Benchmark2D::Rastrigin;
 
     BenchmarkConfig2D bcfg;
-    bcfg.x0 = 21;
+    bcfg.x0 = 51;
     bcfg.y0 = 34;
     bcfg.rastrigin_scale = 25.0;
 
-    // 1) Fixed
-    run_experiment("Runs (Fixed)", RUNS, base_seed, cfg, [&]() {
+    run_experiment("Runs (Fixed)", RUNS, base_seed, cfg, bcfg, [&]() {
         ShaperConfig2D scfg;
         scfg.type = Shaper2D::Fixed;
         scfg.max_generations = cfg.max_generations;
         return std::make_unique<FitnessShaper2D>(bench, bcfg, scfg);
     });
 
-    // 2) Flattened -> base
-    run_experiment("Runs (Flattened)", RUNS, base_seed, cfg, [&]() {
+    /*run_experiment("Runs (Flattened)", RUNS, base_seed, cfg, bcfg, [&]() {
         ShaperConfig2D scfg;
         scfg.type = Shaper2D::Flattened;
         scfg.max_generations = cfg.max_generations;
         return std::make_unique<FitnessShaper2D>(bench, bcfg, scfg);
-    });
+    });*/
 
-    // 3) Taylor (local)  (TaylorGlobal removed)
-    run_experiment("Runs (Taylor)", RUNS, base_seed, cfg, [&]() {
+    // Taylor disabled for now
+    /*
+    run_experiment("Runs (Taylor)", RUNS, base_seed, cfg, bcfg, [&]() {
         ShaperConfig2D scfg;
         scfg.type = Shaper2D::Taylor;
         scfg.max_generations = cfg.max_generations;
@@ -136,15 +141,15 @@ int main() {
         scfg.taylor_surrogate_weight = 0.3;
         return std::make_unique<FitnessShaper2D>(bench, bcfg, scfg);
     });
+    */
 
-    // 4) Fourier
-    run_experiment("Runs (Fourier)", RUNS, base_seed, cfg, [&]() {
+    run_experiment("Runs (Fourier)", RUNS, base_seed, cfg, bcfg, [&]() {
         ShaperConfig2D scfg;
         scfg.type = Shaper2D::Fourier;
+        
         scfg.max_generations = cfg.max_generations;
         scfg.fourier_n0 = 1;
-        scfg.fourier_nmax = 10;
-        scfg.fourier_surrogate_weight = 0.3;
+        scfg.fourier_nmax = 127;
         return std::make_unique<FitnessShaper2D>(bench, bcfg, scfg);
     });
 
